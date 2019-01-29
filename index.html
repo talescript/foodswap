@@ -15,9 +15,9 @@
             <img src="assets/img/brand.svg" class="dib w2 h2 br-100" alt="Site Name">
         </a>
         <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="How it Works">How it Works</a>
-            <a class="link dim dark-gray f6 f5-l dib" href="#" title="Contact">Contact</a>
+            <!-- <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="How it Works">How it Works</a> -->
+            <a class="link dim dark-gray f6 f5-l dib" href="#contact" title="Contact">Contact</a>
         </div>
     </nav>
     <section class="bg-gold sans-serif mb5">
@@ -117,7 +117,13 @@
             </div>
         </div>
     </section>
-    <section class="pa4 black-80 flex justify-center bg-gold">
+    <style>
+        body {
+            scroll-behavior: smooth; 
+        }
+    </style>
+    
+    <section class="pa4 black-80 flex justify-center bg-gold" id="contact">
         <form action="sign-up_submit" accept-charset="utf-8" netlify>
             <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
                 <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
