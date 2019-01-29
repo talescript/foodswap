@@ -17,8 +17,6 @@
         <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
             <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>
             <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="How it Works">How it Works</a>
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Blog">Blog</a>
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Press">Press</a>
             <a class="link dim dark-gray f6 f5-l dib" href="#" title="Contact">Contact</a>
         </div>
     </nav>
@@ -33,13 +31,13 @@
             <h5 class="f6 ttu tracked black-80">Wilmington, DE, USA</h5>
         </div>
     </section>
-    <div class="pa4 ph7-l georgia mw9-l center mb5">
+    <section class="pa4 ph7-l georgia mw9-l center mb5">
         <h2 class="ttu f3">Welcome Swappers</h2>
         <p class="f5 f3-ns lh-copy measure georgia">
             Bring your homemade or homegrown items for a barter style swap! Meet fellow foodies, bakers, gardeners, farmers and local
             like-minded people. Bring an old friend or come and make new friends. Serving the Wilmington, Delaware area.
         </p>
-    </div>
+    </section>
 
     <section class="mw9 center ph3-ns mb5">
         <div class="cf ph2-ns">
@@ -93,7 +91,7 @@
             </div>
         </div>
     </section>
-    <section class="mw9 center ph3-ns">
+    <section class="mw9 center ph3-ns mb5">
         <div class="cf ph2-ns">
             <div class="fl w-100 w-50-ns pa2">
                 <div class="bg-white pa4">
@@ -118,6 +116,33 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="pa4 black-80 flex justify-center bg-gold">
+        <form action="sign-up_submit" method="get" accept-charset="utf-8">
+            <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+                <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
+                <div class="mt3">
+                    <label class="db fw4 lh-copy f6" for="password">Name</label>
+                    <input class="pa2 input-reset ba b--black-20" type="text" name="password" id="password">
+                </div>
+                <div class="mt3 mb3">
+                    <label class="db fw4 lh-copy f6" for="email-address">Email address</label>
+                    <input class="pa2 input-reset ba b--black-20 measure" type="email" name="email-address" id="email-address">
+                </div>
+                <div>
+                    <label for="comment" class="f6 b db mb2">Comments
+                        <span class="normal black-60">(optional)</span>
+                    </label>
+                    <textarea id="comment" name="comment" class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" aria-describedby="comment-desc"></textarea>
+                    <small id="comment-desc" class="f6 black-60">Helper text for a form control. Can use this text to
+                        <a href="#" class="link underline black-80 hover-blue">link to more info.</a>
+                    </small>
+                </div>
+            </fieldset>
+            <div class="mt3">
+                <input class="b ph3 pv2 input-reset ba b--black bg-white grow pointer f6" type="submit" value="Sign Up">
+            </div>
+        </form>
     </section>
 
 
