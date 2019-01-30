@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/tachyons.min.css">
+    <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
     <title>Wilmington Food Swap</title>
 </head>
 
@@ -119,38 +120,80 @@
     </section>
     <style>
         body {
-            scroll-behavior: smooth; 
+            scroll-behavior: smooth;
         }
     </style>
-    
-    <section class="pa4 black-80 flex justify-center bg-gold" id="contact">
-        <form action="sign-up_submit" accept-charset="utf-8" netlify>
-            <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
-                <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
-                <div class="mt3">
-                    <label class="db fw4 lh-copy f6" for="name">Name</label>
-                    <input class="pa2 input-reset ba b--black-20" type="text" name="name" id="name">
+
+    <section class="pa4 black-80 bg-gold" id="contact">
+
+        <div class="mw9 center ph3-ns">
+            <div class="cf ph2-ns">
+                <div class="fl w-100 w-50-ns pa2">
+                    <div class="pv4">
+                            <h2 class="f2">Some words</h2>
+                            <p class="measure">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis illo sint dolor, blanditiis quasi optio!</p>
+                            <p class="measure">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="measure">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta inventore explicabo maiores harum! Magnam, cupiditate. Delectus temporibus obcaecati maiores, earum repellat vitae debitis quas nobis?</p>
+                    </div>
                 </div>
-                <div class="mt3 mb3">
-                    <label class="db fw4 lh-copy f6" for="email-address">Email address</label>
-                    <input class="pa2 input-reset ba b--black-20 measure" type="email" name="email-address" id="email-address">
+
+                <div class="fl w-100 w-50-ns pa2">
+                    <div class="pv4">
+                            
+                            <form action="sign-up_submit" accept-charset="utf-8" netlify>
+                                    <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+                                        <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
+                                        <div class="mt3">
+                                            <label class="db fw4 lh-copy f6" for="name">Name</label>
+                                            <input class="pa2 input-reset ba b--black-20" type="text" name="name" id="name">
+                                        </div>
+                                        <div class="mt3 mb3">
+                                            <label class="db fw4 lh-copy f6" for="email-address">Email address</label>
+                                            <input class="pa2 input-reset ba b--black-20 measure" type="email" name="email-address" id="email-address">
+                                        </div>
+                                        <div>
+                                            <label for="comment" class="f6 b db mb2">Comments
+                                                <span class="normal black-60">(optional)</span>
+                                            </label>
+                                            <textarea id="comment" name="comment" class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2" aria-describedby="comment-desc"></textarea>
+                                        </div>
+                                    </fieldset>
+                                    <div class="mt3 mb3">
+                                        <input class="b ph3 pv2 input-reset ba b--black bg-white grow pointer f6" type="submit" value="Submit">
+                                    </div>
+                                    <small id="comment-desc" class="f6 black-60">WilmingtonFoodSwap@gmail.com</small>
+                                </form>
+                    </div>
                 </div>
-                <div>
-                    <label for="comment" class="f6 b db mb2">Comments
-                        <span class="normal black-60">(optional)</span>
-                    </label>
-                    <textarea id="comment" name="comment" class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2" aria-describedby="comment-desc"></textarea>
-                </div>
-            </fieldset>
-            <div class="mt3 mb3">
-                <input class="b ph3 pv2 input-reset ba b--black bg-white grow pointer f6" type="submit" value="Submit">
             </div>
-            <small id="comment-desc" class="f6 black-60">WilmingtonFoodSwap@gmail.com</small>
-        </form>
+        </div>
     </section>
+    <section class="juice pv2 bg-gold">
+        <ul class="juicer-feed" data-feed-id="wilmington_food_swap"></ul>
+    </section>    
 
-
-
+    <div class="juicy"></div>
+    <script>
+        let script = document.createElement('script');
+        script.src = "https://assets.juicer.io/embed.js";
+        document.querySelector(".juicy").appendChild(script);
+        // Originally I tried removing the logo by detecting script load
+        // but for some reason that didn't work
+        // The script naturally evolved into this convuluted mess
+        script.onload = function() {
+            console.log("script loaded")
+            function pause() {
+                wait_a_little = setTimeout(removeLogo, 1500);
+            }
+            function removeLogo(){
+                elem = document.querySelector(".referral");
+                elem.parentNode.removeChild(elem);
+                console.log(elem);
+                console.log("hello, I waited")
+            }
+            pause();
+        }
+    </script>
 </body>
 
 </html>
